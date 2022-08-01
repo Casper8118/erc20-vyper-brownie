@@ -50,6 +50,7 @@ def transferFrom(_from: address, _to: address, _value: uint256) -> bool:
   self.allowance[_from][msg.sender] -= _value
   log Transfer(_from, _to, _value)
   return True
+  
 @external
 def approve(_spender: address, _value: uint256) -> bool:
   self.allowance[msg.sender][_spender] = _value
